@@ -1,0 +1,15 @@
+<!-- Using Jinja logic, extends will (starting at the templates directory)
+extend header.html with any other html -->
+{% extends "landing/header.html" %}
+
+<!-- What we place in here will be placed in between the
+{ block content } and { endblock } of header.html-->
+{% block content %}
+<p>Welcome to the UCI Game Catalog!</p>
+
+<!-- This include is for short snippets of code that you want to include. This
+is ideal in a case where you have multiple snippets of code you want included in
+your main html you are extending from. This Jinja logic below will extend out to
+every html code in the directory chosen, instead of you having to extend 1 by 1.-->
+{% include "landing/includes/htmlsnippet.html" %}
+{% endblock %}

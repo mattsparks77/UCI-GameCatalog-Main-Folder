@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Beginning of <head> -->
+<head>
+	<title>Game Catalog</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'landing/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<!-- Beginning of <body -->
+<body class="body" style="background-color:#f6f6f6">
+  <!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row"> <!--Row 1, top row with the profile pic and header 3 title-->
+			  <div class="col-sm-2"> <!--Profile pic will occupy 2 out of the 12 columns-->
+				  <br> <!--means break, make a new line-->
+				  <center>
+					<img src="{% static 'landing/img/profile.png' %}" class="responsive-img" style='max-height:100px;' alt="face">
+				  </center>
+			  </div>
+			  <div class="col-sm-10"> <!--Header occupies the rest, so 10 out of 12 columns. This goes left to right.-->
+				  <br>
+				  <center>
+				  <h3>Game Catalog</h3>
+				  </center>
+			  </div>
+		</div> <!--row1-->
+
+    <hr> <!--this is to make the Horizontal Line divider-->
+
+		<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
+		  <div class="col-sm-2"> <!--Column container with Nav Bar-->
+  		  <br><br>
+  		  <!-- Great, til you resize. -->
+  			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+  			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
+  			  <ul class="nav nav-pills nav-stacked">
+  				<li><a href='/'>Home</a></li>
+  				<li><a href='/blog/'>Blog</a></li>
+  				<li><a href='/contact/'>Contact</a></li>
+  			  </ul>
+  			</div> <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+
+      <div class="col-sm-10">
+  			<div class='container-fluid'>
+  			<br><br>
+  			   {% block content %}
+  			   {% endblock %}
+  			</div>
+		  </div> <!--col-sm-10-->
+		</div> <!--row2-->
+	</div>
+
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
