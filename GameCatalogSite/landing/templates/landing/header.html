@@ -21,23 +21,25 @@
 <body class="body" style="background-color:#f6f6f6">
   <!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
 	<div class="container-fluid" style="min-height:95%; ">
-		<div class="row"> <!--Row 1, top row with the profile pic and header 3 title-->
-			  <div class="col-sm-2"> <!--Profile pic will occupy 2 out of the 12 columns-->
-				  <br> <!--means break, make a new line-->
-				  <center>
-					<img src="{% static 'landing/img/profile.png' %}" class="responsive-img" style='max-height:100px;' alt="face">
-				  </center>
+		<!--UCI Game Catalog Title-->
+		<div class="row" style="background-color:#0366A3;">
+			  <div class="col-12">
+					<img src="{% static 'landing/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI">
 			  </div>
-			  <div class="col-sm-10"> <!--Header occupies the rest, so 10 out of 12 columns. This goes left to right.-->
-				  <br>
-				  <center>
-				  <h3>Game Catalog</h3>
-				  </center>
-			  </div>
-		</div> <!--row1-->
+		</div>
 
-    <hr> <!--this is to make the Horizontal Line divider-->
+		<!--Yellow Bar-->
+    <div class="row" style="background-color:#FFD230; height:5px;">
+			<div class="col-12">
+			</div>
+		</div>
 
+		<div class="row" style="height:50px;">
+			<div class="col-12">
+			</div>
+		</div>
+
+		<!--Navigation & Content-->
 		<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
 		  <div class="col-sm-2"> <!--Column container with Nav Bar-->
   		  <br><br>
@@ -52,14 +54,33 @@
   			</div> <!--well bs-sidebar affix-->
 		  </div> <!--col-sm-2-->
 
-      <div class="col-sm-10">
-  			<div class='container-fluid'>
-  			<br><br>
-  			   {% block content %}
-  			   {% endblock %}
-  			</div>
-		  </div> <!--col-sm-10-->
-		</div> <!--row2-->
+			<!--How featured Game Box is styled. http://getbootstrap.com/docs/4.1/layout/grid/#nesting-->
+      <div class="col-sm-8">
+				<div class="row" style="background-color:#1B3E6B;">
+      		<div class="col-5 col-sm-6">
+        		{% block gameImage %}
+						{% endblock %}
+      		</div>
+      		<div class="col-5 col-sm-6">
+						<div class='container-fluid'>
+							<br><br>
+							 {% block gameDesc %}
+							 {% endblock %}
+							 <br><br>
+						</div>
+      		</div>
+    		</div>
+
+				<!--Space bottom of Game Box to hold Randomize Button-->
+				<div class="row" style="height:50px; background-color:#1B3E6B; opacity:0.9">
+				</div>
+		  </div>
+
+			<!--To add space to the right side of Game Box-->
+			<div class="col-sm-2">
+			</div>
+
+		</div> <!--Navigation & Content-->
 	</div>
 
 	<footer>
