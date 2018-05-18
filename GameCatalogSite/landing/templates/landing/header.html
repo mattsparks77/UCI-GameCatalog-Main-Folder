@@ -34,6 +34,7 @@
 			</div>
 		</div>
 
+		<!--Space Between-->
 		<div class="row" style="height:50px;">
 			<div class="col-12">
 			</div>
@@ -56,23 +57,28 @@
 
 			<!--How featured Game Box is styled. http://getbootstrap.com/docs/4.1/layout/grid/#nesting-->
       <div class="col-sm-8">
-				<div class="row" style="background-color:#1B3E6B;">
-      		<div class="col-5 col-sm-6">
-        		{% block gameImage %}
+				<!--Space bottom of Game Box to hold Randomize Button and Title-->
+				<div class="row" style="height:50px; background-color:#1B3E6B;">
+    		</div>
+
+				<!--Space to hold the 2 columns of Game Image and Game Desc-->
+				<div class="row" style="height:250px; background-color:#1B3E6B; opacity:0.9">
+
+					<!--Game Image Side-->
+					<div class="col-5 col-sm-5">
+						{% block gameImage %}
 						{% endblock %}
-      		</div>
-      		<div class="col-5 col-sm-6">
+					</div>
+
+					<!--Game Desc Side-->
+					<div class="col-5 col-sm-7">
 						<div class='container-fluid'>
 							<br><br>
 							 {% block gameDesc %}
 							 {% endblock %}
 							 <br><br>
 						</div>
-      		</div>
-    		</div>
-
-				<!--Space bottom of Game Box to hold Randomize Button-->
-				<div class="row" style="height:50px; background-color:#1B3E6B; opacity:0.9">
+					</div>
 				</div>
 		  </div>
 
@@ -81,6 +87,36 @@
 			</div>
 
 		</div> <!--Navigation & Content-->
+
+		<!--Space Between-->
+		<div class="row" style="height:50px;">
+		</div>
+
+		<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
+			<div class="col-sm-2">
+			</div> <!--col-sm-2-->
+
+			<div class="col-sm-8">
+				<div class="row" style="height:50px; background-color:#1B3E6B;">
+					<div class="col-5 col-sm-6">
+					</div>
+					<div class="col-5 col-sm-6">
+						<div class='container-fluid'>
+						</div>
+					</div>
+				</div>
+
+				<!--Space bottom of Game Box to hold Top Viewed Games-->
+				<div class="row" style="height:200px; background-color:#1B3E6B; opacity:0.9">
+				</div>
+			</div>
+
+			<!--To add space to the right side of Game Box-->
+			<div class="col-sm-2">
+			</div>
+
+		</div>
+
 	</div>
 
 	<footer>
