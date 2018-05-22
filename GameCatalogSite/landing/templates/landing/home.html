@@ -2,22 +2,55 @@
 extend header.html with any other html -->
 {% extends "landing/header.html" %}
 
-<!-- What we place in here will be placed in between the
-{ block content } and { endblock } of header.html-->
-{% block gameDesc %}
-<p>Welcome to the UCI Game Catalog! <br> This is where game descriptions would go.
-The {.% block "name" %.} that jinja reads depends if its the same "name". I
-placed periods before the %s else it'll give me an error thinking I'm trying to
-call jinja logic.</p>
+<!--Always do this if you want to cal things from the static folder.-->
+{% load staticfiles %}
 
-<!-- This include is for short snippets of code that you want to include. This
-is ideal in a case where you have multiple snippets of code you want included in
-your main html you are extending from. This Jinja logic below will extend out to
-every html code in the directory chosen, instead of you having to extend 1 by 1.-->
-{% include "landing/includes/htmlsnippet.html" %}
+{% block gameTitle %}
+  <h2 style="margin:5px;"><font color="#fff">
+    Sonic Adventure
+  </font></h2>
 {% endblock %}
 
 {% block gameImage %}
-<p>AN IMAGE IS SUPPOSE TO GO HERE! <br>
-This text came from /landing/includes/gameImageTest.html</p>
+  <img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
+  style='max-height:90%; max-width:90%; margin:10px; margin-bottom:5%' alt="Game Image Here">
+{% endblock %}
+
+<!-- What we place in here will be placed in between the
+{ block content } and { endblock } of header.html-->
+{% block gameDesc %}
+  <p style="margin:5px"><font size="2" color="#000">
+    Doctor Robotnik, a mad scientist, plots to get rid of his longtime nemesis Sonic,
+    obtain the Chaos Emeralds, and conquer the world. Robotnik learns of Chaos and
+    shatters the Master Emerald, releasing him and Tikal. Knuckles, the only remaining
+    echidna, sets out to find the shards of the Master Emerald, while Sonic and his sidekick
+    Tails try to stop Robotnik from retrieving the Chaos Emeralds.
+
+    <!-- This include is for short snippets of code that you want to include. This
+    is ideal in a case where you have multiple snippets of code you want included in
+    your main html you are extending from. This Jinja logic below will extend out to
+    every html code in the directory chosen, instead of you having to extend 1 by 1.-->
+
+    <p align="right"><a href="/game/">Read More</a></p>
+
+    {% include "landing/includes/htmlsnippet.html" %}
+  </font></p>
+
+
+
+{% endblock %}
+
+{% block gameTopView1 %}
+  <img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
+  style='max-height:90%; max-width:90%; margin:10px;' alt="Game Image Here">
+{% endblock %}
+
+{% block gameTopView2 %}
+  <img src="{% static 'landing/img/Bomberman_PSP.jpg' %}" class="rounded mx-auto d-block"
+  style='max-height:90%; max-width:90%; margin:10px;' alt="Game Image Here">
+{% endblock %}
+
+{% block gameTopView3 %}
+  <img src="{% static 'landing/img/nes_monopoly.jpg' %}" class="rounded mx-auto d-block"
+  style='max-height:90%; max-width:90%; margin:10px;' alt="Game Image Here">
 {% endblock %}

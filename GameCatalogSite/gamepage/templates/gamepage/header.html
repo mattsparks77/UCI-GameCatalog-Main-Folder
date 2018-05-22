@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- UCI Colors: Light Blue=#0366A3 , Dark Blue=#1B3E6B , Yellow=#FFD230 -->
+
+<!-- Beginning of <head> -->
+<head>
+	<title>Game Catalog</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'gamepage/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+
+	<script src="{% static 'gamepage/js/bootstrap.min.js	' %}"></script>
+</head>
+
+<!-- Beginning of <body -->
+<body class="body" style="background-color:#f6f6f6">
+  <!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
+	<div class="container-fluid">
+		<!--UCI Game Catalog Title-->
+		<div class="row" style="background-color:#0366A3;">
+			  <div class="col-12">
+					<img src="{% static 'landing/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI">
+			  </div>
+		</div>
+
+		<!--Yellow Bar-->
+    <div class="row" style="background-color:#FFD230; height:5px;">
+			<div class="col-12">
+			</div>
+		</div>
+
+<!-- START CHANGING THINGS HERE-->
+<div class="container" style="max-width:80%; max-height:100%;">
+	<div class="row" style="max-height:100%;">
+		<div class="col-3" style="background-color:#ddd;">
+
+				<div class="row" style="height:100px;">
+					<div class="col-12" align="middle" style="margin-top:10%;">
+						{% block gameTitle %}
+						{% endblock %}
+					</div>
+				</div>
+
+				<div class="row" style=" height:300px;">
+					{% block gameImage  %}{% endblock  %}
+				</div>
+
+				<div class="row">
+					{% block basicInfo %}
+					{% endblock %}
+				</div>
+
+				<div class="row">
+					<div class="col-12" align="middle" style="max-width:80%; max-height:80%; margin-left:10%;">
+						<div id="list-example" class="list-group">
+						  <a class="list-group-item list-group-item-action" href="#list-item-1">Plot</a>
+						  <a class="list-group-item list-group-item-action" href="#list-item-2">Gameplay</a>
+						  <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+						  <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="col-9" style="background-color:#eee;">
+			<div class="row" style="height:100px;">
+			</div>
+			<div class="row">
+					<div class="col-12" style="max-width:80%; max-height:80%; margin-left:10%;">
+						<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+						  <h4 id="list-item-1">Plot</h4>
+							{%  block Plot %}
+							{%  endblock %}
+						  <h4 id="list-item-2">Gameplay</h4>
+							{%  block Gameplay %}
+							{%  endblock %}
+						  <h4 id="list-item-3">Item 3</h4>
+						  <p>...</p>
+						  <h4 id="list-item-4">Item 4</h4>
+						  <p>...</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+
+</html>
