@@ -46,7 +46,7 @@ html, body, .Container
 
 .LeftContent
 {
-    background-color: #aaa;
+    background-color: #bbb;
     float: left;
     width: 300px;
 }
@@ -55,4 +55,14 @@ html, body, .Container
 {
     background-color: #ddd;
     overflow: auto;
+    overflow-x: hidden;
+}
+
+#fitin {
+    width: 300px;
+    height: 75px;
+    border: 1px solid black;
+    overflow: hidden;
+    font-size: 2em;
+    margin:0 auto;
 }

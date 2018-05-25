@@ -9,7 +9,7 @@
 	<meta charset="utf-8" />
 	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static 'gamepage/css/bootstrap.min.css' %}" type = "text/css"/>
-	<link rel="stylesheet" href="{% static 'gamepage/css/testAddon.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'gamepage/css/gamePageAddon.css' %}" type = "text/css"/>
 
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
@@ -28,7 +28,7 @@
 </head>
 
 <!-- Beginning of <body -->
-<body class="body" style="background-color:#f6f6f6">
+<body class="body" style="background-color:#f6f6f6; overflow:hidden;">
   <!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
 	<div class="container-fluid">
 		<!--UCI Game Catalog Title-->
@@ -38,44 +38,10 @@
 			  </div>
 		</div>
 
-		<!--Yellow Bar with Horizontal NavBar-->
-    <div class="row" style="background-color:#FFD230; height:45px;">
-			<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav mr-auto">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Link</a>
-			      </li>
-			      <li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Dropdown
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="#">Action</a>
-			          <a class="dropdown-item" href="#">Another action</a>
-			          <div class="dropdown-divider"></div>
-			          <a class="dropdown-item" href="#">Something else here</a>
-			        </div>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link disabled" href="#">Disabled</a>
-			      </li>
-			    </ul>
-				    <form class="form-inline my-2 my-lg-0" align="right">
-				      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				    </form>
-					</div>
-			</nav>
+		<!--Yellow Bar-->
+    <div class="row" style="background-color:#FFD230; height:5px;">
 		</div>
-</div>
+	</div>
 
 <!-- START CHANGING THINGS HERE-->
 
@@ -86,7 +52,9 @@
 					<!-- Fixed Left Side -->
 						<div class="LeftContent">
 							<div class="row" style="height:75px">
-								{% block gameTitle %}{% endblock %}
+								<div id="fitin">
+									{% block gameTitle %}{% endblock %}
+								</div>
 							</div>
 							<div class="row" style="height:300px">
 								{% block gameImage %}{% endblock %}
@@ -108,7 +76,7 @@
 							<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
 
 								<!-- Slideshow of Screenshots -->
-								<h4 id="list-item-1">Media</h4>
+								<h4 id="list-item-1" style="margin:10px;">Media</h4>
 									<div class="row" style="height:300px; background-color:#eee">
 											<div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-width:100%; margin: 0 auto">
 
@@ -137,14 +105,24 @@
 											</div>
 									</div> <!--Carousel Row-->
 
-								<h4 id="list-item-2">Plot</h4>
-									{%  block Plot %}{% endblock %}
+								<h4 id="list-item-2" style="max-height:100%; margin:10px;">Plot</h4>
+									<div class="row" style="background-color:#eee">
+										<div class="col-12">
+											{%  block Plot %}{% endblock %}
+										</div>
+									</div>
 
-								<h4 id="list-item-3">Gameplay</h4>
-									{%  block Gameplay %}{%  endblock %}
+								<h4 id="list-item-3" style="max-height:100%; margin:10px;">Gameplay</h4>
+									<div class="row" style="background-color:#eee">
+										<div class="col-12" style="margin: 0 auto;">
+											{%  block Gameplay %}{%  endblock %}
+										</div>
+									</div>
 
-								<h4 id="list-item-4">Item 4</h4>
-								<p>...</p>
+								<h4 id="list-item-4" style="max-height:100%; margin:10px;">Item 4</h4>
+								<div class="row" style="background-color:#eee">
+									<p>...</p>
+								</div>
 
 							</div>
 
@@ -156,7 +134,7 @@
 <script src="{% static 'gamepage/js/jquery-3.0.0.slim.js' %}"></script>
 <script src="{% static 'gamepage/js/popper.js' %}"></script>
 <script src="{% static 'gamepage/js/bootstrap.min.js' %}"></script>
-
+<script src="{% static 'gamepage/js/gamePageFunc.js' %}"></script>
 </body>
 
 </html>
