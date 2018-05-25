@@ -6,21 +6,19 @@ extend header.html with any other html -->
 {% load staticfiles %}
 
 {% block gameTitle %}
-  <h2 style="margin-left:10%; margin-top:5%;"><font color="#000">
-    Sonic Adventure
-  </font></h2>
+  <p align="middle"><font color="#000"> Sonic Adventure </font></p>
 {% endblock %}
 
 {% block gameImage %}
   <img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
-  style='max-height:80%; max-width:80%; margin-top:5%; margin-bottom:5%' alt="Game Image Here">
+  style='display:block; margin-left: auto; margin-right: auto;' alt="Game Image Here">
 {% endblock %}
 
 {% block basicInfo %}
 {% endblock %}
 
 {%  block Plot %}
-  <p>
+  <p align="justify" style="padding:20px;">
     On Angel Island, a tribe of echidnas lives in harmony with the Chao. The Chao are peaceful creatures
     that protect the all-powerful Master Emerald, which balances the power of the seven mystical Chaos Emeralds.
     One of the echidnas, Tikal, befriends Chaos, an entity who protects the Chao. The power-hungry echidnas try
@@ -46,7 +44,7 @@ extend header.html with any other html -->
 {%  endblock %}
 
 {%  block Gameplay %}
-  <p>
+  <p align="justify" style="padding:20px;">
     Sonic Adventure is a platformer action video game with role-playing elements.[1] Players control one of six anthropomorphic
     protagonists as they venture to defeat Doctor Robotnik and his robot army, who seek the seven magical Chaos Emeralds and the
     evil entity Chaos. Six player characters are unlocked as the game progresses, each with their own story and attributes. Sonic
@@ -85,26 +83,18 @@ extend header.html with any other html -->
 
 {% block Media %}
   <div class="carousel-item active">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H5k9CgkWRg8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="carousel-item">
     <img class="d-block w-100" src="{% static 'gamepage/img/heh.png' %}" alt="First slide">
-    <div class="carousel-caption">
-      <h3>HEH</h3>
-      <p>Derp Bird</p>
-    </div>
   </div>
 
   <div class="carousel-item">
     <img class="d-block w-100" src="{% static 'gamepage/img/Sonic_Adventure.png' %}" alt="Second slide">
-    <div class="carousel-caption">
-      <h3>Sonic Adventure</h3>
-      <p>This is the game cover!!!</p>
-    </div>
   </div>
 
   <div class="carousel-item">
     <img class="d-block w-100" src="{% static 'gamepage/img/sonic_adventure_image_00.jpg' %}" alt="Third slide">
-    <div class="carousel-caption">
-      <h3>Gameplay</h3>
-      <p>User play as Sonic the Hedgehog.</p>
-    </div>
   </div>
 {% endblock %}

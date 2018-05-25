@@ -21,136 +21,117 @@
 
 <!-- Beginning of <body -->
 <body class="body" style="background-color:#f6f6f6">
-  <!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
+
+<!-- START CHANGING THINGS HERE-->
+
+<div class="Container">
+	<!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
 	<div class="container-fluid">
 		<!--UCI Game Catalog Title-->
 		<div class="row" style="background-color:#0366A3;">
-			  <div class="col-12">
-					<img src="{% static 'landing/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI">
-			  </div>
+				<div class="col-12"><a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI"></a></div>
 		</div>
 
 		<!--Yellow Bar-->
-    <div class="row" style="background-color:#FFD230; height:5px;">
-			<div class="col-12">
-			</div>
-		</div>
+		<div class="row" style="background-color:#FFD230; height:5px;"></div>
 
 		<!--Space Between-->
-		<div class="row" style="height:50px;">
-		</div>
+		<div class="row" style="height:50px;"></div>
 	</div>
 
-<!-- START CHANGING THINGS HERE-->
-	<div class="container" style="max-width:80%; max-height:100%;">
-		<!--Navigation & Content-->
-		<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
+	<div class="Content">
 
-			<div class="col-sm-2"> <!--Column container with Nav Bar-->
-  			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
-					<nav class="nav flex-column">
-					  <a class="nav-link active" href="#">Active</a>
-					  <a class="nav-link" href="#">Link</a>
-					  <a class="nav-link" href="#">Link</a>
-					  <a class="nav-link disabled" href="#">Disabled</a>
-					</nav>
-  			</div> <!--well bs-sidebar affix-->
-		  </div> <!--col-sm-2-->
+		<div class="Wrapper">
+				<!-- Scroll Right Side-->
+				<div class="RightContent">
+					<div class="row">
+						<div class="col-sm-2"></div> <!--col-sm-2-->
 
-			<!--How featured Game Box is styled. http://getbootstrap.com/docs/4.1/layout/grid/#nesting-->
-      <div class="col-sm-8" style="width:25px">
-				<!--Space bottom of Game Box to hold Randomize Button and Title.-->
-				<div class="row" style="height:50px; background-color:#0366A3;">
-					{% block gameTitle %}
-					{% endblock %}
-    		</div>
+								<div class="col-sm-8" style="width:25px">
 
-				<!--Yellow Bar-->
-				<div class="row" style="background-color:#FFD230; height:2px;">
-					<div class="col-12">
+									<!--Space bottom of Game Box to hold Randomize Button and Title.-->
+										<div class="row" style="height:50px; background-color:#0366A3;">
+											{% block gameTitle %}
+											{% endblock %}
+						    		</div>
+
+										<!--Yellow Bar-->
+										<div class="row" style="background-color:#FFD230; height:2px;"></div>
+
+										<!--Space to hold the 2 columns of Game Image and Game Desc-->
+										<div class="row" style="height:250px;">
+
+										<!--Game Image Side-->
+										<div class="col-4" style="background-color:#ddd;">
+												{% block gameImage %}
+												{% endblock %}
+										</div>
+
+										<!--Game Desc Side-->
+										<div class="col-8" style="background-color:#eee;">
+											 {% block gameDesc %}
+											 {% endblock %}
+										</div>
+									</div>
+		  					</div>
+							<!--To add space to the right side of Game Box-->
+							<div class="col-sm-2"></div>
+
+						<!-- SPACE ON BOTTOM -->
+						<div class="row" style="height:200px; background-color:#eee"></div>
 					</div>
+
+					<!--Space Between-->
+					<div class="row" style="height:50px;"></div>
+
+					<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
+						<div class="col-2">
+						</div>
+
+						<div class="col-8">
+
+							<div class="row" style="height:50px; background-color:#0366A3;">
+								<h3 style="margin:5px;"><font color="#fff">
+									Top 3 Viewed Games
+								</font></h3>
+							</div>
+
+							<!--Yellow Bar-->
+							<div class="row" style="background-color:#FFD230; height:2px;">
+								<div class="col-12">
+								</div>
+							</div>
+
+							<!--Space bottom of Game Box to hold Top Viewed Games-->
+							<div class="row" style="height:200px;">
+								<div class="col-4" style="background-color:#ccc;">
+									{% block gameTopView1 %}
+									{% endblock %}
+								</div>
+								<div class="col-4" style="background-color:#ddd;">
+									{% block gameTopView2 %}
+									{% endblock %}
+								</div>
+								<div class="col-4" style="background-color:#ccc;">
+									{% block gameTopView3 %}
+									{% endblock %}
+								</div>
+							</div>
+						</div>
+
+						<!--To add space to the right side of Game Box-->
+						<div class="col-2"></div>
+
+					</div>
+
 				</div>
-
-				<!--Space to hold the 2 columns of Game Image and Game Desc-->
-				<div class="row" style="height:250px;">
-
-					<!--Game Image Side-->
-					<div class="col-4" style="background-color:#ddd;">
-						{% block gameImage %}
-						{% endblock %}
-					</div>
-
-					<!--Game Desc Side-->
-					<div class="col-8" style="background-color:#eee;">
-							 {% block gameDesc %}
-							 {% endblock %}
-					</div>
-				</div>
-		  </div>
-
-			<!--To add space to the right side of Game Box-->
-			<div class="col-sm-2">
 			</div>
-
-		</div> <!--Navigation & Content-->
-
-		<!--Space Between-->
-		<div class="row" style="height:50px;">
 		</div>
+</div>
 
-		<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
-			<div class="col-2">
-			</div>
-
-			<div class="col-8">
-
-				<div class="row" style="height:50px; background-color:#0366A3;">
-					<h3 style="margin:5px;"><font color="#fff">
-						Top 3 Viewed Games
-					</font></h3>
-				</div>
-
-				<!--Yellow Bar-->
-				<div class="row" style="background-color:#FFD230; height:2px;">
-					<div class="col-12">
-					</div>
-				</div>
-
-				<!--Space bottom of Game Box to hold Top Viewed Games-->
-				<div class="row" style="height:200px;">
-					<div class="col-4" style="background-color:#ccc;">
-						{% block gameTopView1 %}
-						{% endblock %}
-					</div>
-					<div class="col-4" style="background-color:#ddd;">
-						{% block gameTopView2 %}
-						{% endblock %}
-					</div>
-					<div class="col-4" style="background-color:#ccc;">
-						{% block gameTopView3 %}
-						{% endblock %}
-					</div>
-				</div>
-			</div>
-
-			<!--To add space to the right side of Game Box-->
-			<div class="col-2">
-			</div>
-
-		</div>
-	</div>
-
-	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-
-			<!--Space Between-->
-			<div class="row" style="height:100px;">
-			</div>
-
-			<p><a href="/" target="blank">Home</a> | <a href="#" target="blank">Link</a> | <a href="#" target="blank">Link</a> | <a href="#" target="blank">Link</a></p>
-		</div>
-	</footer>
-
+<script src="{% static 'landing/js/jquery-3.0.0.slim.js' %}"></script>
+<script src="{% static 'landing/js/popper.js' %}"></script>
+<script src="{% static 'landing/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>
