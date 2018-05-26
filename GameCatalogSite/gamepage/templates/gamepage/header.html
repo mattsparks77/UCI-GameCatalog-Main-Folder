@@ -40,18 +40,22 @@
 							<div class="row" style="height:300px; background-color:#ccc">
 								{% block gameImage %}{% endblock %}
 							</div>
-							<div class="row" style="max-height:100%; background-color:#bbb">
-								<div id="fitin">
-									{% block gameTitle %}{% endblock %}
+							<div class="row" style="max-height:100%; background-color:#0366A3">
+								<div id="fitin">{% block gameTitle %}{% endblock %}</div>
+							</div>
+							<div class="row" style="max-height:100%; background-color:#ddd;">
+								<div class="col-12" style="">
+									{% block gameDescLeft %}{% endblock %}
 								</div>
 							</div>
-							<div class="row" style="height:100%; background-color:#ddd" align="middle">
-									<div id="list-example" class="list-group list-group-flush" style="margin:0 auto; padding:20px;">
+							<div class="row" style="max-height:100%; background-color:#ddd" align="middle">
+								<div class="col-12" style="width:100%">
+									<div id="list-example" class="list-group list-group-flush" style="margin:0 auto;">
 										<a class="list-group-item list-group-item-action" href="/game">Top</a>
 									  <a class="list-group-item list-group-item-action" href="#list-item-1">Media</a>
 									  <a class="list-group-item list-group-item-action" href="#list-item-2">Plot</a>
 									  <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
-									  <a class="list-group-item list-group-item-action" href="#list-item-4">Something</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -105,9 +109,6 @@
 											{%  block Gameplay %}{%  endblock %}
 										</div>
 									</div>
-
-								<h4 id="list-item-4" style="max-height:100%; padding:10px; margin:0 auto">Something</h4>
-
 							</div>
 				</div>
 		</div>
