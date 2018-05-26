@@ -7,6 +7,8 @@
 html, body, .Container
 {
     height: 100%;
+    overflow-y:auto;
+    overflow-x: hidden;
 }
 
     .Container:before
@@ -18,9 +20,16 @@ html, body, .Container
 
 .Header
 {
-    margin-bottom: 10px;
-    background-color: #6ea364;
+    height: 95px;
+    position: static;
+    background-color:#0366A3;
+    display: block;
 }
+    .Header::after
+    {
+        background-color:#FFD230;
+        height: 5px;
+    }
 .Content
 {
     position: relative;
@@ -43,6 +52,11 @@ html, body, .Container
     {
         height: 100%;
     }
+
+.TopContent
+{
+
+}
 
 .LeftContent
 {
