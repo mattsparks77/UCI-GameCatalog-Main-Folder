@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'inf117grp01',
         'USER' : 'inf117grp01',
         'PASSWORD' : 'U!d.hwu1Hsuc',
-        'HOST' : 'matt-smith-v4.ics.uci.edu',
+        'HOST' : 'matt-smith-v4',
         'PORT' : '3306',
     }
 }
