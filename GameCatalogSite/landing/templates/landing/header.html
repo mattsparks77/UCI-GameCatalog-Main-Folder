@@ -49,8 +49,7 @@
 				<div class="col-sm-7" style="max-width:55%;">
 					<!--Space bottom of Game Box to hold Randomize Button and Title.-->
 						<div class="row" style="height:50px; width:100%; background-color:#0366A3;margin:0 auto;">
-							{% block gameTitle %}
-							{% endblock %}
+							{% block gameTitle %}{% endblock %}
 						</div>
 
 						<!--Yellow Bar-->
@@ -58,14 +57,12 @@
 						<!--Space to hold the 2 columns of Game Image and Game Desc-->
 						<div class="row" style="height:250px;width:100%;margin:0 auto;">
 							<!--Game Image Side-->
-							<div class="col-4" style="background-color:#ddd;width:40%;">
-								{% block gameImage %}
-								{% endblock %}
+							<div class="col-4" style="background-color:#ddd;height:100%;width:100%;padding:10px;">
+								{% block gameImage %}{% endblock %}
 							</div>
 							<!--Game Desc Side-->
-							<div class="col-8" style="background-color:#eee;width:60%;">
-								{% block gameDesc %}
-								{% endblock %}
+							<div class="col-8" style="background-color:#eee;width:100%;">
+								{% block gameDesc %}{% endblock %}
 							</div>
 						</div>
 
