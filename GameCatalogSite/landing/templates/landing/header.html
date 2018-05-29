@@ -29,7 +29,18 @@
 	<div class="container-fluid">
 		<!--UCI Game Catalog Title-->
 		<div class="row" style="background-color:#0366A3;">
-				<div class="col-12"><a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI"></a></div>
+            <div class="col-10">
+					<a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI"></a>
+			</div>
+
+            <div class="col-2">
+                <div class="search">
+                    <form action="/game/">
+                        <input type="text" class="searchTerm" placeholder="Search" style='margin-top:25px; margin-bottom:25px'>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
 		</div>
 
 		<!--Yellow Bar-->
