@@ -46,34 +46,32 @@
 			<div class="row" style="">
 				<div class="col-sm-1" style="max-width:10%;"></div>
 				<!-- LEFT SIDE COLUMN WITH CONTENT -->
-				<div class="col-sm-7" style="max-width:55%;">
+				<div class="col-sm-7" style="max-width:55%;background-color:#000;">
 					<!--Space bottom of Game Box to hold Randomize Button and Title.-->
-					<div class="row" style="width:100%;">
-						<div class="row" style="height:50px; width:100%;background-color:#0366A3;">
+						<div class="row" style="height:50px; width:100%; background-color:#0366A3;margin:0 auto;">
 							{% block gameTitle %}
 							{% endblock %}
 						</div>
 
 						<!--Yellow Bar-->
-						<div class="row" style="background-color:#FFD230; height:2px;width:100%;"></div>
+						<div class="row" style="background-color:#FFD230; height:2px;width:100%;margin:0 auto;"></div>
 						<!--Space to hold the 2 columns of Game Image and Game Desc-->
-						<div class="row" style="height:250px;width:100%;">
+						<div class="row" style="height:250px;width:100%;margin:0 auto;">
 							<!--Game Image Side-->
-							<div class="col-4" style="background-color:#ddd;">
+							<div class="col-4" style="background-color:#ddd;width:40%;">
 								{% block gameImage %}
 								{% endblock %}
 							</div>
 							<!--Game Desc Side-->
-							<div class="col-8" style="background-color:#eee;">
+							<div class="col-8" style="background-color:#eee;width:60%;">
 								{% block gameDesc %}
 								{% endblock %}
 							</div>
 						</div>
-					</div>
 
 					<div class="row" style="height:30px;width:100%;"></div>
 
-					<div class="row" style="background-color:#ddd;width:100%;padding:20px;">
+					<div class="row" style="background-color:#ddd;width:100%;padding:20px;margin:0 auto;">
 						<img src="{% static 'landing/img/Super_Mario.jpg' %}" alt="..." class="rounded float-left" style="height:33%;width:33%">
 						<img src="{% static 'landing/img/Summoned.jpg' %}" alt="..." class="rounded mx-auto d-block" style="height:33%;width:33%">
 						<img src="{% static 'landing/img/anteater.jpg' %}" alt="..." class="rounded float-right" style="height:33%;width:33%">
