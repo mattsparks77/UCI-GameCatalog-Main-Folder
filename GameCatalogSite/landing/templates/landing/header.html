@@ -39,94 +39,81 @@
 		<div class="row" style="height:50px;"></div>
 	</div>
 
+<!-- CONTENT STARTS HERE -->
+
 	<div class="Content">
-
 		<div class="Wrapper">
-				<!-- Scroll Right Side-->
-				<div class="RightContent">
-					<div class="row">
-						<div class="col-sm-2"></div> <!--col-sm-2-->
-
-								<div class="col-sm-8" style="width:25px">
-
-									<!--Space bottom of Game Box to hold Randomize Button and Title.-->
-										<div class="row" style="height:50px; background-color:#0366A3;">
-											{% block gameTitle %}
-											{% endblock %}
-						    		</div>
-
-										<!--Yellow Bar-->
-										<div class="row" style="background-color:#FFD230; height:2px;"></div>
-
-										<!--Space to hold the 2 columns of Game Image and Game Desc-->
-										<div class="row" style="height:250px;">
-
-										<!--Game Image Side-->
-										<div class="col-4" style="background-color:#ddd;">
-												{% block gameImage %}
-												{% endblock %}
-										</div>
-
-										<!--Game Desc Side-->
-										<div class="col-8" style="background-color:#eee;">
-											 {% block gameDesc %}
-											 {% endblock %}
-										</div>
-									</div>
-		  					</div>
-							<!--To add space to the right side of Game Box-->
-							<div class="col-sm-2"></div>
-
-						<!-- SPACE ON BOTTOM -->
-						<div class="row" style="height:200px; background-color:#eee"></div>
-					</div>
-
-					<!--Space Between-->
-					<div class="row" style="height:50px;"></div>
-
-					<div class="row"> <!--Row 2, below Row 1. Holds the Navigation Bar and Text Content-->
-						<div class="col-2">
+			<div class="row" style="">
+				<div class="col-sm-1" style="max-width:10%;"></div>
+				<!-- LEFT SIDE COLUMN WITH CONTENT -->
+				<div class="col-sm-7" style="max-width:55%;">
+					<!--Space bottom of Game Box to hold Randomize Button and Title.-->
+					<div class="row" style="width:100%;">
+						<div class="row" style="height:50px; width:100%;background-color:#0366A3;">
+							{% block gameTitle %}
+							{% endblock %}
 						</div>
 
-						<div class="col-8">
-
-							<div class="row" style="height:50px; background-color:#0366A3;">
-								<h3 style="margin:5px;"><font color="#fff">
-									Top 3 Viewed Games
-								</font></h3>
+						<!--Yellow Bar-->
+						<div class="row" style="background-color:#FFD230; height:2px;width:100%;"></div>
+						<!--Space to hold the 2 columns of Game Image and Game Desc-->
+						<div class="row" style="height:250px;width:100%;">
+							<!--Game Image Side-->
+							<div class="col-4" style="background-color:#ddd;">
+								{% block gameImage %}
+								{% endblock %}
 							</div>
-
-							<!--Yellow Bar-->
-							<div class="row" style="background-color:#FFD230; height:2px;">
-								<div class="col-12">
-								</div>
-							</div>
-
-							<!--Space bottom of Game Box to hold Top Viewed Games-->
-							<div class="row" style="height:200px;">
-								<div class="col-4" style="background-color:#ccc;">
-									{% block gameTopView1 %}
-									{% endblock %}
-								</div>
-								<div class="col-4" style="background-color:#ddd;">
-									{% block gameTopView2 %}
-									{% endblock %}
-								</div>
-								<div class="col-4" style="background-color:#ccc;">
-									{% block gameTopView3 %}
-									{% endblock %}
-								</div>
+							<!--Game Desc Side-->
+							<div class="col-8" style="background-color:#eee;">
+								{% block gameDesc %}
+								{% endblock %}
 							</div>
 						</div>
-
-						<!--To add space to the right side of Game Box-->
-						<div class="col-2"></div>
-
 					</div>
 
-				</div>
+					<div class="row" style="height:30px;width:100%;"></div>
+
+					<div class="row" style="background-color:#ddd;width:100%;padding:20px;">
+						<img src="{% static 'landing/img/Super_Mario.jpg' %}" alt="..." class="rounded float-left" style="height:33%;width:33%">
+						<img src="{% static 'landing/img/Summoned.jpg' %}" alt="..." class="rounded mx-auto d-block" style="height:33%;width:33%">
+						<img src="{% static 'landing/img/anteater.jpg' %}" alt="..." class="rounded float-right" style="height:33%;width:33%">
+					</div>
+			 	</div>
+
+				<div class="col-sm-1" style="max-width:5%;"></div>
+				<div class="col-sm-2" style="max-width:20%;">
+					<table class="table table-hover" style="">
+					  <thead>
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col">Top</th>
+								<th scope="col">Viewed</th>
+								<th scope="col">Games</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td colspan="3">{% block gameTopView1 %}{% endblock %}</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td colspan="3">{% block gameTopView2 %}{% endblock %}</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td colspan="3">{% block gameTopView3 %}{% endblock %}</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div> <!--col-sm-2-->
+				<div class="col-sm-1" style="max-width:10%";></div>
+
+				<!-- SPACE ON BOTTOM -->
+				<div class="row" style="height:200px; background-color:#eee"></div>
 			</div>
 		</div>
+	</div>
 </div>
 
 <script src="{% static 'landing/js/jquery-3.0.0.slim.js' %}"></script>

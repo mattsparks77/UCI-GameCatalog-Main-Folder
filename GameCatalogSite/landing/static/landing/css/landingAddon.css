@@ -25,6 +25,9 @@ html, body, .Container
 {
     position: relative;
     z-index: 1;
+    background-color: #ddd;
+    overflow: auto;
+    overflow-x: hidden;
 }
     .Content:after
     {
@@ -43,20 +46,6 @@ html, body, .Container
     {
         height: 100%;
     }
-
-.LeftContent
-{
-    background-color: #bbb;
-    float: left;
-    width: 300px;
-}
-
-.RightContent
-{
-    background-color: #ddd;
-    overflow: auto;
-    overflow-x: hidden;
-}
 
 #fitin {
     width: 300px;
