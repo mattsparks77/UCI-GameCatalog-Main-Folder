@@ -24,29 +24,23 @@
 
 <!-- START CHANGING THINGS HERE-->
 
-<div class="Container">
-	<!-- For everything within "container-fluid, refer to "http://getbootstrap.com/docs/4.1/layout/grid/ for a better understanding -->
-	<div class="container-fluid">
-		<!--UCI Game Catalog Title-->
-		<div class="row" style="background-color:#0366A3;">
-				<div class="col-12"><a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI"></a></div>
-		</div>
-
-		<!--Yellow Bar-->
-		<div class="row" style="background-color:#FFD230; height:5px;"></div>
-
-		<!--Space Between-->
-		<div class="row" style="height:50px;"></div>
-	</div>
-
-<!-- CONTENT STARTS HERE -->
-
 	<div class="Content">
 		<div class="Wrapper">
-			<div class="row" style="">
-				<div class="col-sm-1" style="max-width:10%;"></div>
+			<!--UCI Game Catalog Title-->
+			<div class="row" style="background-color:#0366A3;height:50px;width:100%">
+				<a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-width:100%;max-height:100%;' alt="iconUCI"></a>
+			</div>
+
+			<!--Yellow Bar-->
+			<div class="row" style="background-color:#FFD230; height:5px;width:100%;"></div>
+
+			<!--Space Between-->
+			<div class="row" style="height:30px;width:100%;"></div>
+
+			<div class="row" style="height:90%;width:100%;">
+				<div class="col-sm-1" style="height:100%;width:10%;"></div>
 				<!-- LEFT SIDE COLUMN WITH CONTENT -->
-				<div class="col-sm-7" style="max-width:55%;">
+				<div class="col-sm-7" style="height:100%;width:55%;">
 					<!--Space bottom of Game Box to hold Randomize Button and Title.-->
 						<div class="row" style="height:50px; width:100%; background-color:#0366A3;margin:0 auto;">
 							{% block gameTitle %}{% endblock %}
@@ -75,17 +69,17 @@
 					</div>
 			 	</div>
 
-				<div class="col-sm-1" style="max-width:5%;"></div>
+				<div class="col-sm-1" style="height:100%;width:30px;"></div>
 
 				<!-- RIGHT CONTENT -->
-				<div class="col-sm-2" style="max-width:20%;">
-					<table class="table table-hover" style="">
-					  <thead>
+				<div class="col-sm-2" style="height:100%;width:25%;">
+					<table class="table table-striped table-hover" style="background-color:#eee; ">
+					  <thead style="background-color:#0366A3">
 					    <tr>
-					      <th scope="col">#</th>
-					      <th scope="col">Top</th>
-								<th scope="col">Viewed</th>
-								<th scope="col">Games</th>
+					      <th scope="col"><font color="white">#</font></th>
+					      <th scope="col"><font color="white">Top</font></th>
+								<th scope="col"><font color="white">Viewed</font></th>
+								<th scope="col"><font color="white">Games</font></th>
 					    </tr>
 					  </thead>
 					  <tbody>
@@ -104,7 +98,7 @@
 					  </tbody>
 					</table>
 				</div> <!--col-sm-2-->
-				<div class="col-sm-1" style="max-width:10%";></div>
+				<div class="col-sm-1" style="height:100%;width:10%";></div>
 
 				<!-- SPACE ON BOTTOM -->
 				<div class="row" style="height:200px; background-color:#eee"></div>
