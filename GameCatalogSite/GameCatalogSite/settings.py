@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'GameCatalogSite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'inf117grp01',
-        'USER' : 'inf117grp01',
-        'PASSWORD' : 'U!d.hwu1Hsuc',
-        'HOST' : 'matt-smith-v4',
-        'PORT' : '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
