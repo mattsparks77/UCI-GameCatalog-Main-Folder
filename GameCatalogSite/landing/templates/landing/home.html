@@ -6,9 +6,9 @@ extend header.html with any other html -->
 {% load staticfiles %}
 
 {% block gameTitle %}
-  <h2 style="padding:5px;"><font color="#fff">
+  <h4 style="padding:2px;margin-left:17px;"><font color="#fff">
     Sonic Adventure
-  </font></h2>
+  </font></h4>
 {% endblock %}
 
 {% block gameImage %}
@@ -32,8 +32,6 @@ extend header.html with any other html -->
     every html code in the directory chosen, instead of you having to extend 1 by 1.-->
 
     <p align="right"><a href="/game/">Read More</a></p>
-
-    {% include "landing/includes/htmlsnippet.html" %}
   </font></p>
 
 
@@ -41,16 +39,16 @@ extend header.html with any other html -->
 {% endblock %}
 
 {% block gameTopView1 %}
-  <img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
-  style='max-height:50%; max-width:50%; margin:10px;' alt="Game Image Here">
+  <a href="/game/"><img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
+  style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
 {% endblock %}
 
 {% block gameTopView2 %}
   <img src="{% static 'landing/img/Bomberman_PSP.jpg' %}" class="rounded mx-auto d-block"
-  style='max-height:50%; max-width:50%; margin:10px;' alt="Game Image Here">
+  style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here">
 {% endblock %}
 
 {% block gameTopView3 %}
   <img src="{% static 'landing/img/nes_monopoly.jpg' %}" class="rounded mx-auto d-block"
-  style='max-height:50%; max-width:50%; margin:10px;' alt="Game Image Here">
+  style='max-height:75%; max-width:75%; margin:10px;' alt="Game Image Here">
 {% endblock %}
