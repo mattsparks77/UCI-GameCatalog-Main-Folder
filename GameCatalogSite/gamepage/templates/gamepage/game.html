@@ -6,16 +6,17 @@ extend header.html with any other html -->
 {% load staticfiles %}
 
 {% block gameTitle %}
-  <p align="middle"><font color="#000"> Sonic Adventure </font></p>
+  <p align="middle"><font color="#fff"> Sonic Adventure </font></p>
 {% endblock %}
 
 {% block gameImage %}
   <img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
-  style='display:block; margin-left: auto; margin-right: auto;' alt="Game Image Here">
+  style='display:block; max-height: 100%; max-width: 100%; margin:0 auto;' alt="Game Image Here">
 {% endblock %}
 
 {% block gameDescLeft %}
-  <p align="justify" style="padding:30px;  margin:0 auto;">
+  <p align="justify" style="padding:10px;  margin:0 auto;">
+    Title: Sonic Adventure <br>
     Developer: Sonic Team <br>
     Publisher: Sega <br>
     Main Platform: Dreamcast <br>

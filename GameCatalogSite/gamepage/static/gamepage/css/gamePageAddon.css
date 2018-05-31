@@ -7,8 +7,10 @@
 html, body, .Container
 {
     height: 100%;
+    width:100%;
     overflow-y: hidden;
     overflow-x: hidden;
+    font-size:90%;
 }
 
     .Container:before
@@ -49,16 +51,12 @@ html, body, .Container
         height: 100%;
     }
 
-.TopContent
-{
-
-}
-
 .LeftContent
 {
     background-color: #bbb;
     float: left;
-    width: 300px;
+    width: 15%;
+    margin:0 auto;
 }
 
 .RightContent
