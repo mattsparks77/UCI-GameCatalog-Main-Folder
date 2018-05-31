@@ -6,49 +6,48 @@ extend header.html with any other html -->
 {% load staticfiles %}
 
 {% block gameTitle %}
-  <h4 style="padding:2px;margin-left:17px;"><font color="#fff">
+  <h3 style="padding:5px;margin-left:15px;"><font color="#fff">
     Sonic Adventure
-  </font></h4>
+  </font></h3>
 {% endblock %}
 
 {% block gameImage %}
-  <img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
-  style="height:100%; width:100%; padding:10px;margin:0 auto;" alt="Game Image Here">
+  <a href="/game/sonic_adventure"><img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
+  style="height:100%; width:100%; padding:10px;margin:0 auto;" alt="Game Image Here"></a>
 {% endblock %}
 
 <!-- What we place in here will be placed in between the
 { block content } and { endblock } of header.html-->
 {% block gameDesc %}
-  <p style="margin:5px"><font size="2" color="#000">
+  <p style="padding:10px;"><font size="2" color="#000">
     Doctor Robotnik, a mad scientist, plots to get rid of his longtime nemesis Sonic,
     obtain the Chaos Emeralds, and conquer the world. Robotnik learns of Chaos and
     shatters the Master Emerald, releasing him and Tikal. Knuckles, the only remaining
     echidna, sets out to find the shards of the Master Emerald, while Sonic and his sidekick
     Tails try to stop Robotnik from retrieving the Chaos Emeralds.
-
-    <!-- This include is for short snippets of code that you want to include. This
-    is ideal in a case where you have multiple snippets of code you want included in
-    your main html you are extending from. This Jinja logic below will extend out to
-    every html code in the directory chosen, instead of you having to extend 1 by 1.-->
-
     <p align="right"><a href="/game/sonic_adventure/">Read More</a></p>
   </font></p>
-
-
-
 {% endblock %}
 
-{% block gameTopView1 %}
-  <a href="/game/sonic_adventure"><img src="{% static 'gamepage/img/sonic_adventure_00.png' %}" class="rounded mx-auto d-block"
-  style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
-{% endblock %}
+<!-- TOP 3 VIEWED GAMES -->
+  {% block gameTopView1 %}
+    <a href="/game/sonic_adventure"><img src="{% static 'gamepage/img/sonic_adventure_00.png' %}" class="rounded mx-auto d-block"
+    style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
+  {% endblock %}
 
-{% block gameTopView2 %}
-  <a href="/game/tetris"><img src="{% static 'gamepage/img/tetris_00.jpg' %}" class="rounded mx-auto d-block"
-  style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
-{% endblock %}
+  {% block gameTopView2 %}
+    <a href="/game/tetris"><img src="{% static 'gamepage/img/tetris_00.jpg' %}" class="rounded mx-auto d-block"
+    style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
+  {% endblock %}
 
-{% block gameTopView3 %}
-  <a href="/game/bioshock"><img src="{% static 'gamepage/img/bioshock_00.png' %}" class="rounded mx-auto d-block"
-  style='max-height:75%; max-width:75%; margin:10px;' alt="Game Image Here"></a>
-{% endblock %}
+  {% block gameTopView3 %}
+    <a href="/game/bioshock"><img src="{% static 'gamepage/img/bioshock_00.png' %}" class="rounded mx-auto d-block"
+    style='max-height:75%; max-width:75%; margin:10px;' alt="Game Image Here"></a>
+  {% endblock %}
+
+<!-- BOTTOM 3 IMAGE SLOTS FOR ADS OR WHATEVER -->
+  {% block 3bottomImages %}
+    <img src="{% static 'landing/img/Super_Mario.jpg' %}" alt="..." class="rounded float-left" style="height:33%;width:33%">
+    <img src="{% static 'landing/img/Summoned.jpg' %}" alt="..." class="rounded mx-auto d-block" style="height:33%;width:33%">
+    <img src="{% static 'landing/img/anteater.jpg' %}" alt="..." class="rounded float-right" style="height:33%;width:33%">
+  {% endblock %}
