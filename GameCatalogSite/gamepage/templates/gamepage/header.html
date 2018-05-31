@@ -49,7 +49,7 @@
 								<div class="col-12" style="width:100%">
 									<div id="list-example" class="list-group list-group-flush" style="margin:0 auto;">
 									  <a class="list-group-item list-group-item-action" href="#list-item-1">Media</a>
-									  <a class="list-group-item list-group-item-action" href="#list-item-2">Plot</a>
+									  <a class="list-group-item list-group-item-action" href="#list-item-2">Summary</a>
 									  <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
 									</div>
 								</div>
@@ -68,10 +68,7 @@
 
 												<!-- Indicators -->
 												<ol class="carousel-indicators">
-													<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-													<li data-target="#myCarousel" data-slide-to="1"></li>
-													<li data-target="#myCarousel" data-slide-to="2"></li>
-													<li data-target="#myCarousel" data-slide-to="3"></li>
+													{% block MediaIndicators %}{% endblock %}
 												</ol>
 
 												<!-- Wrapper for slides -->
@@ -92,10 +89,10 @@
 											</div>
 									</div> <!--Carousel Row-->
 
-								<h4 id="list-item-2" style="max-height:100%; padding:10px;">Plot</h4>
+								<h4 id="list-item-2" style="max-height:100%; padding:10px;">Summary</h4>
 									<div class="row" style="background-color:#eee">
 										<div class="col-12">
-											{%  block Plot %}{% endblock %}
+											{%  block Summary %}{% endblock %}
 										</div>
 									</div>
 

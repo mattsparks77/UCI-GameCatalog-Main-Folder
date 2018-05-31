@@ -31,7 +31,7 @@ extend header.html with any other html -->
     your main html you are extending from. This Jinja logic below will extend out to
     every html code in the directory chosen, instead of you having to extend 1 by 1.-->
 
-    <p align="right"><a href="/game/">Read More</a></p>
+    <p align="right"><a href="/game/sonic_adventure/">Read More</a></p>
   </font></p>
 
 
@@ -39,16 +39,16 @@ extend header.html with any other html -->
 {% endblock %}
 
 {% block gameTopView1 %}
-  <a href="/game/"><img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
+  <a href="/game/sonic_adventure"><img src="{% static 'gamepage/img/sonic_adventure_00.png' %}" class="rounded mx-auto d-block"
   style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
 {% endblock %}
 
 {% block gameTopView2 %}
-  <img src="{% static 'landing/img/Bomberman_PSP.jpg' %}" class="rounded mx-auto d-block"
-  style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here">
+  <a href="/game/tetris"><img src="{% static 'gamepage/img/tetris_00.jpg' %}" class="rounded mx-auto d-block"
+  style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
 {% endblock %}
 
 {% block gameTopView3 %}
-  <img src="{% static 'landing/img/nes_monopoly.jpg' %}" class="rounded mx-auto d-block"
-  style='max-height:75%; max-width:75%; margin:10px;' alt="Game Image Here">
+  <a href="/game/bioshock"><img src="{% static 'gamepage/img/bioshock_00.png' %}" class="rounded mx-auto d-block"
+  style='max-height:75%; max-width:75%; margin:10px;' alt="Game Image Here"></a>
 {% endblock %}
