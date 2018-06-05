@@ -5,12 +5,6 @@ extend header.html with any other html -->
 <!--Always do this if you want to cal things from the static folder.-->
 {% load staticfiles %}
 
-{% block gameTitle %}
-  <h3 style="padding:5px;margin-left:15px;"><font color="#fff">
-    Sonic Adventure
-  </font></h3>
-{% endblock %}
-
 {% block gameImage %}
   <a href="/game/sonic_adventure"><img src="{% static 'landing/img/Sonic_Adventure.png' %}" class="rounded mx-auto d-block"
   style="height:100%; width:100%; padding:10px;margin:0 auto;" alt="Game Image Here"></a>
@@ -18,13 +12,31 @@ extend header.html with any other html -->
 
 <!-- What we place in here will be placed in between the
 { block content } and { endblock } of header.html-->
-{% block gameDesc %}
-  <p style="padding:10px;"><font size="2" color="#000">
-    Doctor Robotnik, a mad scientist, plots to get rid of his longtime nemesis Sonic,
-    obtain the Chaos Emeralds, and conquer the world. Robotnik learns of Chaos and
-    shatters the Master Emerald, releasing him and Tikal. Knuckles, the only remaining
-    echidna, sets out to find the shards of the Master Emerald, while Sonic and his sidekick
-    Tails try to stop Robotnik from retrieving the Chaos Emeralds.
+
+{% block gameTitle %}
+  <h2 style="padding:5px;margin-top:10px;"><font color="#000">
+    Sonic Adventure
+  </font></h2>
+{% endblock %}
+
+{% block gameDesc1%}
+<p align="justify" style="padding:5px;  margin:0 auto;">
+  <font size="3" color="#000">Developer: </font><font size="3" color="#0466a2">Sonic Team</font>
+  <font size="3" color="#000">Publisher: </font><font size="3" color="#0466a2">Sega</font> <br>
+  <font size="3" color="#000">Main Platform: </font><font size="3" color="#0466a2">Dreamcast</font>
+  <font size="3" color="#000">Release: </font><font size="3" color="#0466a2">December 23, 1998</font>
+  <font size="3" color="#000">Genre(s): </font><font size="3" color="#0466a2">Platform, Action</font>
+</p>
+{% endblock %}
+
+{% block gameDesc2 %}
+  <p style="padding:5px;"><font size="2" color="#000">
+    On Angel Island, a tribe of echidnas lives in harmony with the Chao. The Chao are peaceful creatures
+    that protect the all-powerful Master Emerald, which balances the power of the seven mystical Chaos Emeralds.
+    One of the echidnas, Tikal, befriends Chaos, an entity who protects the Chao. The power-hungry echidnas try
+    to steal the power of the Master Emerald, massacring the Chao in the process. Horrified, Chaos harnesses the
+    power of the Chaos Emeralds to transform into a monstrous beast, Perfect Chaos. Chaos destroys the island, but
+    is stopped when Tikal seals herself and Chaos inside the Master Emerald.
     <p align="right"><a href="/game/sonic_adventure/">Read More</a></p>
   </font></p>
 {% endblock %}
@@ -32,22 +44,31 @@ extend header.html with any other html -->
 <!-- TOP 3 VIEWED GAMES -->
   {% block gameTopView1 %}
     <a href="/game/sonic_adventure"><img src="{% static 'gamepage/img/sonic_adventure_00.png' %}" class="rounded mx-auto d-block"
-    style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
+    style='max-height:100%; max-width:100%;margin:10px;' alt="Game Image Here"></a>
   {% endblock %}
 
   {% block gameTopView2 %}
     <a href="/game/tetris"><img src="{% static 'gamepage/img/tetris_00.jpg' %}" class="rounded mx-auto d-block"
-    style='max-height:75%; max-width:75%;margin:10px;' alt="Game Image Here"></a>
+    style='max-height:100%; max-width:100%;margin:10px;' alt="Game Image Here"></a>
   {% endblock %}
 
   {% block gameTopView3 %}
     <a href="/game/bioshock"><img src="{% static 'gamepage/img/bioshock_00.png' %}" class="rounded mx-auto d-block"
-    style='max-height:75%; max-width:75%; margin:10px;' alt="Game Image Here"></a>
+    style='max-height:100%; max-width:100%; margin:10px;' alt="Game Image Here"></a>
   {% endblock %}
 
+  <!-- BOTTOM 3 IMAGE SLOTS FOR ADS OR WHATEVER -->
+    {% block 2topImages %}
+      <img src="{% static 'landing/img/Super_Mario.jpg' %}" alt="..." class="rounded float-left" style="height:50%;width:50%">
+      <img src="{% static 'landing/img/Summoned.jpg' %}" alt="..." class="rounded mx-auto d-block" style="height:50%;width:50%">
+    {% endblock %}
+
 <!-- BOTTOM 3 IMAGE SLOTS FOR ADS OR WHATEVER -->
-  {% block 3bottomImages %}
-    <img src="{% static 'landing/img/Super_Mario.jpg' %}" alt="..." class="rounded float-left" style="height:33%;width:33%">
-    <img src="{% static 'landing/img/Summoned.jpg' %}" alt="..." class="rounded mx-auto d-block" style="height:33%;width:33%">
-    <img src="{% static 'landing/img/anteater.jpg' %}" alt="..." class="rounded float-right" style="height:33%;width:33%">
+  {% block 2bottomImages %}
+    <img src="{% static 'landing/img/Summoned.jpg' %}" alt="..." class="rounded mx-auto d-block" style="height:50%;width:50%">
+    <img src="{% static 'landing/img/anteater.jpg' %}" alt="..." class="rounded float-right" style="height:50%;width:50%">
+  {% endblock %}
+
+  {% block socialTwitter %}
+    <a class="twitter-timeline" data-width="100%" data-height="100%" href="https://twitter.com/UCIrvine?ref_src=twsrc%5Etfw">Tweets by UCIrvine</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   {% endblock %}

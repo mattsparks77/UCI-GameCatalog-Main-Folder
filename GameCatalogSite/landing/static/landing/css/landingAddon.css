@@ -50,11 +50,6 @@ html, body, .Container
         height: 100%;
     }
 
-.TopContent
-{
-
-}
-
 .LeftContent
 {
     background-color: #bbb;
@@ -67,23 +62,4 @@ html, body, .Container
     background-color: #ddd;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-#fitin {
-    width: 300px;
-    height: 100%;
-    overflow: hidden;
-    font-size: 2em;
-    margin:0 auto;
-    padding: 20px;
-}
-
-/* key stuff */
-.VideoCentered {
-    width: 560px; /* you have to have a size or this method doesn't work */
-    height: 315px; /* think about making these max-width instead - might give you some more responsiveness */
-
-    top: 0; right: 0; /* confuse it i guess */
-    bottom: 0; left: 0;
-    margin: auto; /* make em equal */
 }

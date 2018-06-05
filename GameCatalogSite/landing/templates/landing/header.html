@@ -20,7 +20,7 @@
 </head>
 
 <!-- Beginning of <body -->
-<body class="body" style="background-color:#f6f6f6">
+<body class="body" style="background-color:#eee">
 
 <!-- START CHANGING THINGS HERE-->
 
@@ -52,68 +52,74 @@
 				<div class="col-1" style="height:100%;"></div>
 
 				<!-- LEFT SIDE COLUMN WITH CONTENT -->
-				<div class="col-8" style="height:100%;width:60%;padding:10px;">
+				<div class="col-8" style="height:100%;width:60%;padding:5px;margin-right:5px;">
 					<!--Space bottom of Game Box to hold Randomize Button and Title.-->
-						<div class="row" style="height:49px; width:100%; background-color:#0366A3;margin:0 auto;">
-							{% block gameTitle %}{% endblock %}
-						</div>
+					<div class="row" style="height:60px; width:100%; background-color:#0366A3;margin:0 auto;">
+						<h2 style="padding:10px;margin-left:10px;"><font color="#fff">Game of the Week</font></h2>
+					</div>
 
 						<!--Space to hold the 2 columns of Game Image and Game Desc-->
-						<div class="row" style="width:100%;margin:0 auto;">
+					<div class="row" style="width:100%;margin:0 auto;background-color:#ccc;">
 							<!--Game Image Side-->
-							<div class="col-4" style="background-color:#ddd;height:100%;width:100%;padding:10px;">
-								{% block gameImage %}{% endblock %}
-							</div>
-							<!--Game Desc Side-->
-							<div class="col-8" style="background-color:#eee;width:100%;">
-								{% block gameDesc %}{% endblock %}
-							</div>
+						<div class="col-4" style="background-color:#ccc;height:100%;width:100%;padding:10px;">
+							{% block gameImage %}{% endblock %}
 						</div>
+
+							<!--Game Desc Side-->
+						<div class="col-8" style="background-color:#ddd;max-height:100%;width:100%;">
+							{% block gameTitle %}{% endblock %}
+							<hr>
+							{% block gameDesc1 %}{% endblock %}
+							<hr>
+							{% block gameDesc2 %}{% endblock %}
+						</div>
+					</div>
 
 					<div class="row" style="height:20px;width:100%;"></div>
 
-					<div class="row" style="background-color:#ddd;width:100%;padding:20px;margin:0 auto;">
-						{% block 3bottomImages %}{% endblock %}
+					<div class="row" style="background-color:#ddd;width:100%;padding:10px;margin:0 auto;">
+						<div class="col-6">
+							<div class="row" style="background-color:#ddd;width:100%;padding:5px;margin:0 auto;">
+								{% block 2topImages %}{% endblock %}
+							</div>
+							<div class="row" style="background-color:#ddd;width:100%;padding:5px;margin:0 auto;">
+								{% block 2bottomImages %}{% endblock %}
+							</div>
+						</div>
+						<div class="col-6" style="padding:5px;">
+							{% block socialTwitter %}
+							{% endblock %}
+						</div>
 					</div>
 			 	</div>
 
 				<!-- RIGHT CONTENT -->
-				<div class="col-3" style="height:100%;width:40%;padding:0px">
-					<table class="table table-striped table-hover" style="background-color:#eee; ">
+				<div class="col-2" style="height:100%;width:100%;margin-top:5px;">
+					<table class="table table-striped table-hover" style="background-color:#ddd; ">
 					  <thead style="background-color:#0366A3;">
 					    <tr>
-					      <th><font color="white">Top Viewed Games</font></th>
-								<!--<th scope="col"><font color="white">Viewed</font></th>
-								<th scope="col"><font color="white">Games</font></th> -->
+					      <th colspan="6"><h4 align="center"><font color="white">Top Viewed Games</font></h4></th>
 					    </tr>
 					  </thead>
-					  <div class="col-2" style="height:100%;width:40%;padding:5px">
-					<table class="table table-striped table-hover" style="background-color:#eee; ">
-					  <thead style="background-color:#0366A3;">
-					    <tr>
 					  <tbody>
 					    <tr>
-					      <th scope="row">1</th>
-					      <td colspan="2">{% block gameTopView1 %}{% endblock %}</td>
+					      <td colspan="6">{% block gameTopView1 %}{% endblock %}</td>
 					    </tr>
 					    <tr>
-					      <th scope="row">2</th>
-					      <td colspan="2">{% block gameTopView2 %}{% endblock %}</td>
+					      <td colspan="6">{% block gameTopView2 %}{% endblock %}</td>
 					    </tr>
 					    <tr>
-					      <th scope="row">3</th>
-					      <td colspan="2">{% block gameTopView3 %}{% endblock %}</td>
+					      <td colspan="6">{% block gameTopView3 %}{% endblock %}</td>
 					    </tr>
 					  </tbody>
 					</table>
-				</div> <!--col-sm-2-->
+				</div>
 
 				<div class="col-1" style="height:100%;"></div>
 
 			</div>
 		</div>
 	</div>
-</div>
 
 <script src="{% static 'landing/js/jquery-3.0.0.slim.js' %}"></script>
 <script src="{% static 'landing/js/popper.js' %}"></script>
