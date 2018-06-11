@@ -1,0 +1,123 @@
+<!-- Using Jinja logic, extends will (starting at the templates directory)
+extend header.html with any other html -->
+{% extends "gamepage/header.html" %}
+
+<!--Always do this if you want to cal things from the static folder.-->
+{% load staticfiles %}
+
+{% block gameImage %}
+  <img src="{% static 'gamepage/img/sonic_adventure_00.png' %}" class="rounded mx-auto d-block"
+  style='display:block; max-height: 100%; max-width: 100%; margin:0 auto;' alt="Game Image Here">
+{% endblock %}
+
+{% block gameDescLeft %}
+  <p align="left" style="padding:10px;  margin:0 auto;">
+    Title: Sonic Adventure <br>
+    Developer: Sonic Team <br>
+    Publisher: Sega <br>
+    Main Platform: Dreamcast <br>
+    Release: December 23, 1998 <br>
+    Genre(s): Platform, Action
+  </p>
+{% endblock %}
+
+<!-- EDIT THE LIST OF SECTIONS ON THE LEFT SIDEBAR -->
+{% block subsectionLabels %}
+  <a class="list-group-item list-group-item-action active" href="#list-item-1">Media</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-2">Summary</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
+{% endblock %}
+
+<!-- THIS IS THE AMOUNT OF INDICATORS BELOW THE CAROUSEL (rectangle bar things) -->
+{% block mediaIndicators %}
+  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#myCarousel" data-slide-to="1"></li>
+{% endblock %}
+
+<!-- YOU PLACE VIDEOS OR IMAGES HERE -->
+{% block media %}
+  <div class="carousel-item active">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H5k9CgkWRg8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="carousel-item">
+    <img class="d-block w-100" src="{% static 'gamepage/img/sonic_adventure_01.jpg' %}" alt="First slide">
+  </div>
+{% endblock %}
+
+<!-- YOU CAN ADD AS MANY SECTIONS, JUST FOLLOW THE FORMAT BELOW TO ADD/MINUS ENTRIES -->
+{%  block sections %}
+  <h4 id="list-item-2" style="max-height:100%; padding:10px;">Summary</h4>
+  <div class="row" style="background-color:#eee">
+    <div class="col-12">
+      <p align="justify" style="padding:20px;">
+        On Angel Island, a tribe of echidnas lives in harmony with the Chao. The Chao are peaceful creatures
+        that protect the all-powerful Master Emerald, which balances the power of the seven mystical Chaos Emeralds.
+        One of the echidnas, Tikal, befriends Chaos, an entity who protects the Chao. The power-hungry echidnas try
+        to steal the power of the Master Emerald, massacring the Chao in the process. Horrified, Chaos harnesses the
+        power of the Chaos Emeralds to transform into a monstrous beast, Perfect Chaos. Chaos destroys the island, but
+        is stopped when Tikal seals herself and Chaos inside the Master Emerald.
+        <br><br>
+        Thousands of years later, Doctor Robotnik, a mad scientist, plots to get rid of his longtime nemesis Sonic,
+        obtain the Chaos Emeralds, and conquer the world. Robotnik learns of Chaos and shatters the Master Emerald,
+        releasing him and Tikal. Knuckles, the only remaining echidna, sets out to find the shards of the Master Emerald,
+         while Sonic and his sidekick Tails try to stop Robotnik from retrieving the Chaos Emeralds. Meanwhile, Robotnik
+         activates several robots, including one named Gamma, to find Froggy, an amphibian who has eaten a Chaos Emerald.
+         Froggy is also pursued by the angler Big, his owner. One of Sonic's friends, Amy, discovers a Flicky in possession
+         of a Chaos Emerald and names it Birdie. They are captured by Gamma and the robots, but Amy persuades Gamma not to
+          work for Robotnik and to help her escape.
+        <br><br>
+        Eventually, Robotnik gathers the Chaos Emeralds and feeds them to Chaos, who uses them to transform into Perfect
+        Chaos. Perfect Chaos destroys Station Square so Robotnik can build his ideal paradise atop its ruins. Sonic, however,
+        uses Chaos Emeralds to transform into his super form and defeats Chaos. Chaos calms down when he sees the Chao living
+        peacefully in Station Square and disappears with Tikal. Realizing he has lost, Robotnik flees, and Sonic chases him to
+        places unknown.
+      </p>
+    </div>
+  </div>
+
+  <h4 id="list-item-3" style="max-height:100%; padding:10px;">Gameplay</h4>
+  <div class="row" style="background-color:#eee">
+    <div class="col-12">
+      <p align="justify" style="padding:20px;">
+        Sonic Adventure is a platformer action video game with role-playing elements.[1] Players control one of six anthropomorphic
+        protagonists as they venture to defeat Doctor Robotnik and his robot army, who seek the seven magical Chaos Emeralds and the
+        evil entity Chaos. Six player characters are unlocked as the game progresses, each with their own story and attributes. Sonic
+        the Hedgehog performs a spin dash, homing attack, and light-speed dash; Miles "Tails" Prower flies, swims, and attacks robots
+        using his tails; Knuckles the Echidna glides, climbs walls, and punches; Amy Rose can defeat enemies using her hammer; Big the
+        Cat is slow and carries a fishing rod he can cast, and E-102 Gamma can shoot laser beams.[2][3]</br>
+    	</br>
+        At the start of the game, the player is placed in one of several Adventure Fields, open-ended hub worlds inhabited by advice-giving
+        non-player characters. The player character is guided and instructed by the voice of Tikal the Echidna. Through exploration, the
+        player discovers entrances to levels called Action Stages, some of which must be opened using keys hidden in the Adventure Field.
+        [4]:141—142 Once the player accesses an Action Stage, they are tasked with a specific objective, which is different for each character.
+        [5] Sonic and Amy must reach the level's end; Tails must reach the end before Sonic; Knuckles must find three hidden shards of the Master
+        Emerald; Big must fish for his pet frog, and Gamma must fight his way through stages using projectiles as a defense.[3][4]:140
+    	</br></br>
+
+        Some levels include minigames separate from the main story. These feature different styles of gameplay, among them rail shooting,
+        racing, and sandboarding. Some minigames can only be accessed with particular characters. Fulfilling certain objectives allows the
+        player to obtain bonus items. Unlocked minigames and stages the player has completed can be accessed from a Trial Mode on the title
+        screen.[3]
+
+      </br></br>
+
+        Like previous Sonic the Hedgehog games, players collect golden rings as a form of health: if the player character is in possession of
+        rings when they are hit by an enemy or other hazard, they will survive, but their rings will scatter and blink before disappearing.
+        Canisters containing power-ups such as speed shoes, additional rings, invincibility, and elemental shields are also hidden in levels.
+        In several stages, the player engages Robotnik or Chaos in a boss fight and must deplete the boss's health meter to proceed.[6][7] Each
+        character starts with a limited number of lives, and the player loses a life if the character drowns, gets crushed, or is hit without
+        any rings in their possession. Losing all lives ends the game. Lives can be replenished by collecting 100 rings or a 1-up.[3]
+    	</br></br>
+        Players may also discover Chao Gardens, hidden, protective environments inhabited by Chao, a virtual pet. Players can hatch, name, and
+        interact with a Chao,[6] and raise the status of their Chao by giving it small animals found by defeating robots. The Dreamcast's handheld
+        Visual Memory Unit (VMU) allows the player to download the minigame Chao Adventure, in which their Chao walks through a course to evolve
+        and improve its skills.[5][8] Evolving one's Chao improves its performance in competitions called Chao Races. Eggs that can produce special
+        types of Chao are hidden throughout the Adventure Fields. Players can earn emblems by playing through Action Stages, searching through the
+        Adventure Fields, or winning Chao Races.[2][9] Each Action Stage has three emblems that can be earned by replaying the stages and fulfilling
+        objectives, such as beating the level within a time limit.[3]
+    	</br></br>
+      </p>
+    </div>
+  </div>
+{%  endblock %}
