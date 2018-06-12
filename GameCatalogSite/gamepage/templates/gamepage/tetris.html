@@ -1,0 +1,81 @@
+<!-- Using Jinja logic, extends will (starting at the templates directory)
+extend header.html with any other html -->
+{% extends "gamepage/header.html" %}
+
+<!--Always do this if you want to cal things from the static folder.-->
+{% load staticfiles %}
+
+{% block gameImage %}
+  <img src="{% static 'gamepage/img/tetris_00.jpg' %}" class="rounded mx-auto d-block"
+  style='display:block; max-height: 100%; max-width: 100%; margin:0 auto;' alt="Game Image Here">
+{% endblock %}
+
+{% block gameDescLeft %}
+  <p align="justify" style="padding:10px;  margin:0 auto;">
+    Title: Tetris <br>
+    Developer: Various <br>
+    Publisher: Various <br>
+    Main Platform: Various <br>
+    Release: June 6, 1984 <br>
+    Genre(s): Puzzle
+  </p>
+{% endblock %}
+
+<!-- EDIT THE LIST OF SECTIONS ON THE LEFT SIDEBAR -->
+{% block subsectionLabels %}
+  <a class="list-group-item list-group-item-action" href="#list-item-1">Media</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-2">About</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
+{% endblock %}
+
+<!-- THIS IS THE AMOUNT OF INDICATORS BELOW THE CAROUSEL (rectangle bar things) -->
+{% block mediaIndicators %}
+  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#myCarousel" data-slide-to="1"></li>
+{% endblock %}
+
+<!-- YOU PLACE VIDEOS OR IMAGES HERE -->
+{% block media %}
+  <div class="carousel-item active">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CvUK-YWYcaE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="carousel-item">
+    <img class="d-block w-100" src="{% static 'gamepage/img/tetris_01.jpg' %}" alt="First slide">
+  </div>
+{% endblock %}
+
+<!-- YOU CAN ADD AS MANY SECTIONS, JUST FOLLOW THE FORMAT BELOW TO ADD/MINUS ENTRIES -->
+{%  block sections %}
+  <h4 id="list-item-2" style="max-height:100%; padding:10px;">About</h4>
+  <div class="row" style="background-color:#eee">
+    <div class="col-12">
+      <p align="justify" style="padding:20px;">
+        Tetris (Russian: Тетрис [ˈtɛtrʲɪs]) is a tile-matching puzzle video game, originally designed and programmed by Russian game designer Alexey Pajitnov.[1] It was released on June 6, 1984,[2] while he was working for the Dorodnitsyn Computing Centre of the Academy of Science of the Soviet Union in Moscow.[3] He derived its name from the Greek numerical prefix tetra- (all of the game's pieces contain four segments) and tennis, Pajitnov's favorite sport.[4][5]
+        <br><br>
+        Tetris was the first entertainment software to be exported from the Soviet Union to the US, where it was published by Spectrum HoloByte for Commodore 64 and IBM PC. Tetris is a popular use of tetrominoes, the four-element special case of polyominoes. Polyominoes have been used in popular puzzles since at least 1907, and the name was given by the mathematician Solomon W. Golomb in 1953.
+        <br><br>
+        The game, or one of its many variants, is available for nearly every video game console and computer operating system, as well as on devices such as graphing calculators, mobile phones, portable media players, PDAs, Network music players and as an Easter egg on non-media products like oscilloscopes.[6] It has inspired Tetris serving dishes[7] and been played on the sides of various buildings.[8]
+      </p>
+    </div>
+  </div>
+
+  <h4 id="list-item-3" style="max-height:100%; padding:10px;">Gameplay</h4>
+  <div class="row" style="background-color:#eee">
+    <div class="col-12">
+      <p <br align="justify" style="padding:20px;">
+        Tetriminos are game pieces shaped like tetrominoes, geometric shapes composed of four square blocks each.
+        A random sequence of Tetriminos fall down the playing field (a rectangular vertical shaft, called the "well" or "matrix").
+        The objective of the game is to manipulate these Tetriminos, by moving each one sideways (if the player feels the need) and rotating it by 90 degree units, with the aim of creating a horizontal line of ten units without gaps.
+        When such a line is created, it gets destroyed, and any block above the deleted line will fall.
+        When a certain number of lines are cleared, the game enters a new level.
+        As the game progresses, each level causes the Tetriminos to fall faster, and the game ends when the stack of Tetriminos reaches the top of the playing field and no new Tetriminos are able to enter.
+        Some games also end after a finite number of levels or lines.
+        <br><br>
+        All of the Tetriminos are capable of single and double clears. I, J, and L are able to clear triples. Only the I Tetrimino has the capacity to clear four lines simultaneously, and this is referred to as a "tetris".
+        (This may vary depending on the rotation and compensation rules of each specific Tetris implementation.
+        For instance, in the Super Rotation System used in most recent implementations,[9] certain situations allow T, S, and Z to 'snap' into tight spots and clear triples.)[10]
+      </p>
+    </div>
+  </div>
+{%  endblock %}
