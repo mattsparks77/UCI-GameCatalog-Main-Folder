@@ -17,8 +17,6 @@ html, body, .Container
         content: '';
         height: 100%;
         float: left;
-        display: table;
-        clear: both;
     }
 
 .Header
@@ -58,45 +56,22 @@ html, body, .Container
     float: left;
     width: 20%;
     margin:0 auto;
-    overflow-y: hidden;
-    height: 100%;
 }
 
 .RightContent
 {
     background-color: #ddd;
-    float:right;
     overflow-x: hidden;
     overflow-y: auto;
     height:100%;
-    width:80%;
 }
 
 /* key stuff */
-.VideoCentered
-{
+.VideoCentered {
     width: 560px; /* you have to have a size or this method doesn't work */
     height: 315px; /* think about making these max-width instead - might give you some more responsiveness */
 
     top: 0; right: 0; /* confuse it i guess */
     bottom: 0; left: 0;
     margin: auto; /* make em equal */
-}
-
-#dragbar
-{
-   background-color:black;
-   height:100%;
-   float: right;
-   width: 3px;
-   cursor: col-resize;
-}
-#ghostbar
-{
-    width:3px;
-    background-color:#000;
-    opacity:0.5;
-    position:absolute;
-    cursor: col-resize;
-    z-index:999
 }
