@@ -11,7 +11,7 @@ extend header.html with any other html -->
 {% endblock %}
 
 {% block gameDescLeft %}
-  <p align="justify" style="padding:10px;  margin:0 auto;">
+  <p align="left" style="padding:10px;  margin:0 auto;">
     Title: Bioshock <br>
     Developer: 2K Boston, 2K Australia <br>
     Publisher: 2K Games <br>
@@ -23,7 +23,7 @@ extend header.html with any other html -->
 
 <!-- EDIT THE LIST OF SECTIONS ON THE LEFT SIDEBAR -->
 {% block subsectionLabels %}
-  <a class="list-group-item list-group-item-action" href="#list-item-1">Media</a>
+  <a class="list-group-item list-group-item-action active" href="#list-item-1">Media</a>
   <a class="list-group-item list-group-item-action" href="#list-item-2">Summary</a>
   <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
 {% endblock %}
@@ -51,18 +51,15 @@ extend header.html with any other html -->
 
 <!-- YOU CAN ADD AS MANY SECTIONS, JUST FOLLOW THE FORMAT BELOW TO ADD/MINUS ENTRIES -->
 {%  block sections %}
-  <h4 id="list-item-2" style="max-height:100%; padding:10px;">Summary</h4>
+  <h4 id="list-item-2" style="max-height:100%;padding:10px;">Summary</h4>
   <div class="row" style="background-color:#eee">
-    <div class="col-12">
       <p align="justify" style="padding:20px;">
         BioShock is set in 1960. The player guides the protagonist, Jack, after his airplane crashes in the ocean near the bathysphere terminus that leads to the underwater city of Rapture. Built by the business magnate Andrew Ryan, the city was intended to be an isolated utopia, but the discovery of ADAM, a genetic material which can be used to grant superhuman powers, initiated the city's turbulent decline. Jack tries to find a way to escape, fighting through hordes of ADAM-obsessed enemies, and the iconic, deadly Big Daddies, while engaging with the few sane humans that remain and eventually learning of Rapture's past. The player, as Jack, is able to defeat foes in a number of ways by using weapons, utilizing plasmids that give unique powers, and by turning Rapture's own defenses against them. BioShock includes elements of role-playing games, giving the player different approaches in engaging enemies such as by stealth, as well as moral choices of saving or killing characters; additionally, the game and biopunk theme borrow concepts from the survival horror genre.
       </p>
-    </div>
   </div>
 
-  <h4 id="list-item-3" style="max-height:100%; padding:10px;">Gameplay</h4>
+  <h4 id="list-item-3" style="max-height:100%;padding:10px;">Gameplay</h4>
   <div class="row" style="background-color:#eee">
-    <div class="col-12">
       <p align="justify" style="padding:20px;">
         BioShock is a first-person shooter with role-playing game customization and stealth elements, and is similar to System Shock 2. The player takes the role of Jack as he is guided through Rapture towards various objectives. The player collects various weapons and plasmids as they work their way through enemy forces. The player can switch between one active weapon and one active plasmid at any time, allowing them to find combination attacks that can be effective against certain enemies, such as first shocking a Splicer then striking them down with a wrench. Weapons are limited by ammunition that the player collects; many weapons have secondary ammo types that can be used instead for additional benefits, such as bullets that inflict fire damage. Plasmid use consumes a serum called EVE which can be restored using EVE syringes collected by the player.[26] The player has a health meter that decreases when they take damage. The player can restore their health with medical packs found throughout Rapture. If the player's health reduces to zero, they will be regenerated at the last Vita-Chamber that they passed with limited amounts of health and EVE. A patch for the game allows players to disable these Vita-Chambers, requiring players to restart a saved game if the character dies.[27]
         <br><br>
@@ -70,6 +67,5 @@ extend header.html with any other html -->
         <br><br>
         The player collects money by exploring Rapture and from the bodies of defeated foes; this money can be used at vending machines to restock on ammunition, health and EVE, and other items; like security cameras, vending machines can also be hacked to reduce the costs of items from it.[30] The player will also receive rewards in the form of ADAM from completing some tasks, as well as from either saving or killing the Little Sisters after defeating their Big Daddy guardian. ADAM is used to purchase new plasmids from Gatherer's Garden machines scattered around Rapture.[32] In addition to plasmids, the player will also collect and buy tonics that provide passive bonuses, such as increasing Jack's strength, using EVE more efficiently, or making Jack more resistant to damage. The player can only have a limited number of plasmids and tonics active at any time, and can swap between the various plasmids and tonics at certain stations located throughout Rapture.[13]
       </p>
-    </div>
   </div>
 {%  endblock %}
