@@ -11,7 +11,7 @@ extend header.html with any other html -->
 {% endblock %}
 
 {% block gameDescLeft %}
-  <p align="justify" style="padding:10px;  margin:0 auto;">
+  <p align="left" style="padding:10px;  margin:0 auto;">
     Title: Tetris <br>
     Developer: Various <br>
     Publisher: Various <br>
@@ -23,7 +23,7 @@ extend header.html with any other html -->
 
 <!-- EDIT THE LIST OF SECTIONS ON THE LEFT SIDEBAR -->
 {% block subsectionLabels %}
-  <a class="list-group-item list-group-item-action" href="#list-item-1">Media</a>
+  <a class="list-group-item list-group-item-action active" href="#list-item-1">Media</a>
   <a class="list-group-item list-group-item-action" href="#list-item-2">About</a>
   <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
 {% endblock %}
@@ -63,7 +63,7 @@ extend header.html with any other html -->
   <h4 id="list-item-3" style="max-height:100%; padding:10px;">Gameplay</h4>
   <div class="row" style="background-color:#eee">
     <div class="col-12">
-      <p <br align="justify" style="padding:20px;">
+      <p <align="justify" style="padding:20px;">
         Tetriminos are game pieces shaped like tetrominoes, geometric shapes composed of four square blocks each.
         A random sequence of Tetriminos fall down the playing field (a rectangular vertical shaft, called the "well" or "matrix").
         The objective of the game is to manipulate these Tetriminos, by moving each one sideways (if the player feels the need) and rotating it by 90 degree units, with the aim of creating a horizontal line of ten units without gaps.
@@ -71,10 +71,13 @@ extend header.html with any other html -->
         When a certain number of lines are cleared, the game enters a new level.
         As the game progresses, each level causes the Tetriminos to fall faster, and the game ends when the stack of Tetriminos reaches the top of the playing field and no new Tetriminos are able to enter.
         Some games also end after a finite number of levels or lines.
+
         <br><br>
+
         All of the Tetriminos are capable of single and double clears. I, J, and L are able to clear triples. Only the I Tetrimino has the capacity to clear four lines simultaneously, and this is referred to as a "tetris".
         (This may vary depending on the rotation and compensation rules of each specific Tetris implementation.
         For instance, in the Super Rotation System used in most recent implementations,[9] certain situations allow T, S, and Z to 'snap' into tight spots and clear triples.)[10]
+        </br></br>
       </p>
     </div>
   </div>
