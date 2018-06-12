@@ -1,4 +1,3 @@
-/*
 var offset = 80;
 
 $('.navbar li a').click(function(event) {
@@ -12,4 +11,3 @@ $(function() {
         $('#fitin div').css('font-size', (parseInt($('#fitin div').css('font-size')) - 1) + "px" );
     }
 });
-*/
