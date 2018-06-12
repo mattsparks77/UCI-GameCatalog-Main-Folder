@@ -30,6 +30,7 @@ Things that needed to be continued:
 - Hosting of the webpage to a site
 
 How To Access Database:
+-Connect to UCI VPN
 -Go to this link
 	http://matt-smith-v4.ics.uci.edu/phpMyAdmin
 -Use this information to login:
