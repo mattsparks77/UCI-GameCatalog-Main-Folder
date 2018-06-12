@@ -8,6 +8,7 @@ html, body, .Container
 {
     overflow-y: hidden;
     overflow-x: hidden;
+    font-size: 90%;
     width:100%;
     height:100%;
 }
