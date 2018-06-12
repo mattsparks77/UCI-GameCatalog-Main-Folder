@@ -27,19 +27,7 @@
 <div class="Container">
 	<div class="Header">
 		<!--UCI Game Catalog Title-->
-			<div class="row" style="background-color:#0366A3;height:90px;width:100%;margin:0;">
-				<div class="col-9"style="width:70%;">
-					<a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-width:100%;max-height:50px; margin:20px' alt="iconUCI"></a>
-				</div>
-
-		<!-- SEARCH BAR -->
-				<div class="col-3" style="width:30%">
-						<form class="form-inline my-2 my-lg-0" action="/game/sonic_adventure">
-							<input class="form-control mr-sm-2" type="search" placeholder="Search Games..." aria-label="Search" style="margin-top:30px;">
-						</form>
-				</div>
-			</div>
-
+		<a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI"></a>
 		<!--Yellow Bar-->
 		<div class="row" style="background-color:#FFD230; height:5px;"></div>
 	</div>
@@ -52,14 +40,14 @@
 							<div class="row" style="height:35%;width:100%;background-color:#bbb;margin:0 auto; margin-top:5%;">
 								{% block gameImage %}{% endblock %}
 							</div>
-							<div class="row" style="background-color:#ccc;margin-top:10%;">
+							<div class="row" style="background-color:#ccc;margin-top:20%;;">
 								<div class="col-12" style="">
 									{% block gameDescLeft %}{% endblock %}
 								</div>
 							</div>
-							<div class="row" style="background-color:#bbb;margin-top:10%;" align="middle">
+							<div class="row" style="background-color:#bbb;margin-top:20%;" align="middle">
 								<div class="col-12" style="width:100%">
-									<div id="subsectionList" class="list-group list-group-flush" style="margin:0 auto;">
+									<div id="list-example" class="list-group list-group-flush" style="margin:0 auto;">
 										{% block subsectionLabels %}{% endblock %}
 									</div>
 								</div>
@@ -67,14 +55,12 @@
 						</div>
 
 					<!-- Scroll Right Side-->
-					<!-- IT IS IMPORTANT TO HAVE DATA-SPY ON THE ELEMENT THAT CONTAINS THE SCROLLSPY -->
-						<div class="RightContent" data-spy="scroll">
+						<div class="RightContent">
 
 							<!-- SCROLL LISTS -->
-							<div data-spy="scroll" data-target="#subsectionList" data-offset="0" class="list-group">
-
+							<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
 								<!-- Slideshow of Screenshots -->
-								<h4 id="list-item-1" style="max-height:100%;padding:10px;">Media</h4>
+								<h4 id="list-item-1" style="max-height:100%; padding:10px;">Media</h4>
 									<div class="row" style="max-height:100%; background-color:#eee">
 											<div id="myCarousel" class="carousel slide" data-interval="false" style="max-width:100%; margin: 0 auto;">
 
@@ -112,7 +98,6 @@
 	<script src="{% static 'gamepage/js/popper.js' %}"></script>
 	<script src="{% static 'gamepage/js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'gamepage/js/gamePageFunc.js' %}"></script>
-
 </body>
 
 </html>
