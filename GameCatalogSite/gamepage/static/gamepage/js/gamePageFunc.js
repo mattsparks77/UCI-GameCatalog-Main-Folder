@@ -1,15 +1,37 @@
-/*
-var offset = 80;
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
 
-$('.navbar li a').click(function(event) {
-    event.preventDefault();
-    $($(this).attr('href'))[0].scrollIntoView();
-    scrollBy(0, -offset);
-});
+       dragging = true;
+       var main = $('.RightContent');
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: main.outerHeight(),
+                                top: main.offset().top,
+                                left: main.offset().left
+                               }
+                        }).appendTo('body');
 
-$(function() {
-    while( $('#fitin div').height() > $('#fitin').height() ) {
-        $('#fitin div').css('font-size', (parseInt($('#fitin div').css('font-size')) - 1) + "px" );
-    }
-});
-*/
+        $(document).mousemove(function(e){
+          ghostbar.css("left",e.pageX+2);
+       });
+
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging)
+       {
+           var percentage = (e.pageX / window.innerWidth) * 100;
+           var mainPercentage = 100-percentage;
+
+           $('#console').text("side:" + percentage + " main:" + mainPercentage);
+
+           $('#sidebar').css("width",percentage + "%");
+           $('.RightContent').css("width",mainPercentage + "%");
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });

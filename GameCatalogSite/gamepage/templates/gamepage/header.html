@@ -49,6 +49,8 @@
 
 					<!-- Fixed Left Side -->
 						<div class="LeftContent">
+							<span id="position"></span>
+							<div id="dragbar"></div>
 							<div class="row" style="height:35%;width:100%;background-color:#bbb;margin:0 auto; margin-top:5%;">
 								{% block gameImage %}{% endblock %}
 							</div>
@@ -106,6 +108,7 @@
 			</div>
 		</div>
 	</div>
+	<div id="console"></div>
 </div>
 
 	<script src="{% static 'gamepage/js/jquery-3.0.0.slim.js' %}"></script>
