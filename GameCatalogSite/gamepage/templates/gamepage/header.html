@@ -27,23 +27,12 @@
 <div class="Container">
 	<div class="Header">
 		<!--UCI Game Catalog Title-->
-			<div class="row" style="background-color:#0366A3;height:90px;width:100%;margin:0;">
-				<div class="col-9"style="width:70%;">
-					<a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-width:100%;max-height:50px; margin:20px' alt="iconUCI"></a>
-				</div>
-
-		<!-- SEARCH BAR -->
-				<div class="col-3" style="width:30%">
-						<form class="form-inline my-2 my-lg-0" action="/game/sonic_adventure">
-							<input class="form-control mr-sm-2" type="search" placeholder="Search Games..." aria-label="Search" style="margin-top:30px;">
-						</form>
-				</div>
-			</div>
-
+		<a href="/"><img src="{% static 'gamepage/img/iconUCI.png' %}" class="responsive-img" style='max-height:50px; margin:20px' alt="iconUCI"></a>
 		<!--Yellow Bar-->
 		<div class="row" style="background-color:#FFD230; height:5px;"></div>
 	</div>
 
+<<<<<<< HEAD
 	<div class="Content">
 		<div class="Wrapper">
 			<!-- Fixed Left Side -->
@@ -84,6 +73,31 @@
 									<!-- Wrapper for slides -->
 									<div class="carousel-inner" style="height:315px; width:560px;">
 										{% block media %}{% endblock %}
+=======
+		<div class="Content">
+				<div class="Wrapper">
+
+					<!-- Fixed Left Side -->
+						<div class="LeftContent">
+							<div class="row" style="height:300px; background-color:#ccc">
+								{% block gameImage %}{% endblock %}
+							</div>
+							<div class="row" style="max-height:100%; background-color:#0366A3">
+								<div id="fitin">{% block gameTitle %}{% endblock %}</div>
+							</div>
+							<div class="row" style="max-height:100%; background-color:#ddd;">
+								<div class="col-12" style="">
+									{% block gameDescLeft %}{% endblock %}
+								</div>
+							</div>
+							<div class="row" style="max-height:100%; background-color:#ddd" align="middle">
+								<div class="col-12" style="width:100%">
+									<div id="list-example" class="list-group list-group-flush" style="margin:0 auto;">
+										<a class="list-group-item list-group-item-action" href="/game">Top</a>
+									  <a class="list-group-item list-group-item-action" href="#list-item-1">Media</a>
+									  <a class="list-group-item list-group-item-action" href="#list-item-2">Plot</a>
+									  <a class="list-group-item list-group-item-action" href="#list-item-3">Gameplay</a>
+>>>>>>> master
 									</div>
 
 									<!-- Left and right controls -->
@@ -98,19 +112,71 @@
 								</div>
 							</div> <!--Carousel Row-->
 
+<<<<<<< HEAD
 							<!-- CALLS FROM <GAME>.html -->
 						{% block sections %}{% endblock %}
 					</div>
 			</div>
+=======
+					<!-- Scroll Right Side-->
+						<div class="RightContent">
+
+							<!-- SCROLL LISTS -->
+							<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+								<!-- Slideshow of Screenshots -->
+								<h4 id="list-item-1" style="max-height:100%; padding:10px;">Media</h4>
+									<div class="row" style="max-height:100%; background-color:#eee">
+											<div id="myCarousel" class="carousel slide" data-interval="false" style="max-width:100%; margin: 0 auto;">
+
+												<!-- Indicators -->
+												<ol class="carousel-indicators">
+													<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+													<li data-target="#myCarousel" data-slide-to="1"></li>
+													<li data-target="#myCarousel" data-slide-to="2"></li>
+													<li data-target="#myCarousel" data-slide-to="3"></li>
+												</ol>
+
+												<!-- Wrapper for slides -->
+												<div class="carousel-inner" style="height:315px; width:560px;">
+													{% block Media %}{% endblock %}
+												</div>
+
+												<!-- Left and right controls -->
+												<a class="carousel-control-prev" href="#myCarousel" data-slide="prev" >
+													<span class="carousel-control-prev-icon"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+													<span class="carousel-control-next-icon"></span>
+													<span class="sr-only">Next</span>
+												</a>
+
+											</div>
+									</div> <!--Carousel Row-->
+
+								<h4 id="list-item-2" style="max-height:100%; padding:10px;">Plot</h4>
+									<div class="row" style="background-color:#eee">
+										<div class="col-12">
+											{%  block Plot %}{% endblock %}
+										</div>
+									</div>
+
+								<h4 id="list-item-3" style="max-height:100%; padding:10px;">Gameplay</h4>
+									<div class="row" style="background-color:#eee">
+										<div class="col-12">
+											{%  block Gameplay %}{%  endblock %}
+										</div>
+									</div>
+							</div>
+				</div>
+>>>>>>> master
 		</div>
-	</div>
 </div>
 
 	<script src="{% static 'gamepage/js/jquery-3.0.0.slim.js' %}"></script>
 	<script src="{% static 'gamepage/js/popper.js' %}"></script>
 	<script src="{% static 'gamepage/js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'gamepage/js/gamePageFunc.js' %}"></script>
-
 </body>
 
 </html>
